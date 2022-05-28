@@ -1,9 +1,6 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { TeachersStyles } from "./TeacherStyles"
 import Teacher from "./Teacher"
-import useFeaturedProduct from "../../hooks/use-featured-product"
-import Button from "../Button/Button"
+import { TeachersStyles } from "./TeacherStyles"
 
 const Teachers = ({ title, introduction, data = [] }) => {
 

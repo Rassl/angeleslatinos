@@ -46,6 +46,7 @@
     "swiper": "^7.4.1"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "prettier": "^2.5.1"
   },
   "repository": {

@@ -1,29 +1,21 @@
-import React, { useContext, useState } from "react"
-import { Link } from "gatsby"
-import MenuContext from "../MenuContext"
 import { motion } from "framer-motion"
-import { menuItems } from "./NavConstants"
-import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
-import useFeaturedProduct from "../../hooks/use-featured-product"
+import { Link } from "gatsby"
+import React, { useContext, useState } from "react"
 import { FiChevronDown as Chevron } from "react-icons/fi"
+import MenuContext from "../MenuContext"
 import {
-  NavModuleStyles,
-  NavTopLevel,
-  SubNavStyles,
-  HamburgerStyles,
-  LogoStyles,
-} from "./NavModuleStyles"
-import {
-  barOneVariants,
-  barTwoVariants,
-  barThreeVariants,
-  menuList,
-  subMenuNavVariants,
+  barOneVariants, barThreeVariants, barTwoVariants, menuList,
+  subMenuNavVariants
 } from "./NavAnim"
+import { menuItems } from "./NavConstants"
+import {
+  HamburgerStyles,
+  LogoStyles, NavModuleStyles,
+  NavTopLevel,
+  SubNavStyles
+} from "./NavModuleStyles"
 
 const NavModule = () => {
-  const featuredProduct = useFeaturedProduct()
-
   const [isOpen, setNav] = useContext(MenuContext)
   const [subNavIsOpen, setSubNav] = useState(false)
 
@@ -34,8 +26,6 @@ const NavModule = () => {
   const toggleSubNav = () => {
     setSubNav((subNavIsOpen) => !subNavIsOpen)
   }
-
-  const { title } = UseSiteMetadata()
 
   return (
     <NavModuleStyles>
@@ -63,14 +53,12 @@ const NavModule = () => {
             ></motion.span>
           </HamburgerStyles>
 
-          {title && (
-            <LogoStyles>
-              <Link to="/">
-                {title}
-                <span>.</span>
-              </Link>
-            </LogoStyles>
-          )}
+          <LogoStyles>
+            <Link to="/">
+              {'title'}
+              <span>.</span>
+            </Link>
+          </LogoStyles>
         </div>
       </div>
       <motion.div
@@ -94,50 +82,6 @@ const NavModule = () => {
               </Link>
             </li>
           ))}
-          {featuredProduct && (
-            <li className={subNavIsOpen ? "open" : "closed"}>
-              <button
-                type="button"
-                onClick={toggleSubNav}
-                onKeyDown={toggleSubNav}
-              >
-                Products<span>.</span>
-                <Chevron />
-              </button>
-
-              <SubNavStyles
-                initial="closed"
-                animate={subNavIsOpen ? "open" : "closed"}
-                variants={subMenuNavVariants}
-              >
-                <li>
-                  <Link
-                    onClick={toggleNav}
-                    onKeyDown={toggleNav}
-                    to="/products"
-                  >
-                    All Products<span>.</span>
-                  </Link>
-                </li>
-                <hr />
-                {featuredProduct.map((item, index) => {
-                  const { gatsbyPath, title } = item
-                  return (
-                    <li key={index}>
-                      <Link
-                        onClick={toggleNav}
-                        onKeyDown={toggleNav}
-                        to={gatsbyPath}
-                      >
-                        {title}
-                        <span>.</span>
-                      </Link>
-                    </li>
-                  )
-                })}
-              </SubNavStyles>
-            </li>
-          )}
         </NavTopLevel>
       </motion.div>
     </NavModuleStyles>

@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import crowd from '../../images/crowd.jpg';
 
 export const SimpleBannerStyles = styled.section`
   height: 70vh;
@@ -24,7 +23,6 @@ export const SimpleBannerStyles = styled.section`
   }
 
   .banner__image {
-    background: url(${crowd});
     opacity: 0.5;
   }
 
