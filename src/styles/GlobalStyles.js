@@ -242,7 +242,7 @@ blockquote {
   h2 {
     display: inline-block;
     border-bottom: 2px solid rgba(255,255,255,0.15);
-    font-size: 120px;
+    font-size: var(--h2);
     color: #e7e7e7;
   }
 

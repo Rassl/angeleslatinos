@@ -38,23 +38,6 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
             {TYPOS.map(i => <li key="i">{i}</li>)}
           </Plx>
         </ul>
-        {children ? (
-          children
-        ) : (
-          <StaticImage
-            className="banner__image"
-            imgClassName="banner__image--content"
-            src="../../../src/images/not-arley.png"
-            alt="Banner Image"
-            layout="fixed"
-            width={700}
-            placeholder="blurred"
-          />
-          // <video loop muted autoplay>
-          //   <source src={videoUrl} type="video/mp4" />
-          // </video>
-        )}
-
         {/* <Slider /> */}
         <div className="container">
           <div className="banner__content">

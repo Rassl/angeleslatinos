@@ -55,7 +55,7 @@ const NavModule = () => {
 
           <LogoStyles>
             <Link to="/">
-              {'title'}
+              {'Angeles Latinos'}
               <span>.</span>
             </Link>
           </LogoStyles>
