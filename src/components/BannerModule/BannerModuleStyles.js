@@ -30,6 +30,16 @@ export const BannerModuleStyles = styled.section`
     justify-content: flex-start;
   }
 
+  @media(max-width:414px) {
+      height: 50vh;
+      .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
   .typo {
     list-style: none;
     position: absolute;
@@ -37,7 +47,7 @@ export const BannerModuleStyles = styled.section`
     right: 10%;
     li {
       text-transform: uppercase;
-      font-size: 200px;
+      font-size: 150px;
       margin: 0;
       opacity: 0.2;
       line-height: 1.2;
@@ -49,6 +59,21 @@ export const BannerModuleStyles = styled.section`
       }
     }
   }
+
+    @media(max-width:414px) {
+      .typo {
+        display: none;
+        li {
+          font-size: 50px;
+          & + li {
+            margin-left: 25px;
+            & + li {
+              margin-left: 30px;
+            }
+          }
+        }
+      }
+    }
 
   .gradient,
   .banner__image {
@@ -93,6 +118,7 @@ export const BannerModuleStyles = styled.section`
     h2 {
       font-size: var(--bannerSubTitle);
       font-weight: 400;
+      letter-spacing: 2px;
       span {
         color: #ffc400;
       }

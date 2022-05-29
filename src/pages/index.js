@@ -15,7 +15,7 @@ import Why from "../components/Why/Why"
 const Index = ({ location }) => {
   return (
     <>
-      <Seo title="Home" />
+      <Seo title="Angeles Latinos" />
       <Layout>
         <BannerModule
           title="Angeles Latinos"

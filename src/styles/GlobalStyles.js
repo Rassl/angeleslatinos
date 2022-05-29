@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
   --sectionMargin: 60px;
 
   @media(min-width:375px) {
-    --bannerTitle: 36px;    
+    --bannerTitle: 36px;
     --h2: 22px;
     --h3: 21px;
     --h4: 20px;
@@ -34,7 +34,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @media(min-width:414px) {
-    --bannerTitle: 40px;    
+    --bannerTitle: 40px;
+     --p: 10px;
     --h2: 27px;
     --h3: 25px;
     --h4: 23px;

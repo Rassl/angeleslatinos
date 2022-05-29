@@ -11,6 +11,7 @@ color: var(--background);
       padding-right: var(--borderSpacing);
       margin-left: calc(var(--borderSpacing) * -1);
       width: calc(100% + (var(--borderSpacing) * 2));
+      max-width: 100vw;
 
       @media (min-width: 1200px) {
         padding-bottom: 0;

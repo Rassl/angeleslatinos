@@ -20,8 +20,18 @@ export const CreatorStyles = styled.section`
       opacity: 0.1;
       background-repeat: no-repeat;
       background-size: cover;
-}
   }
+
+  
+  @media(max-width:414px) {
+      height: 50vh;
+      .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
 
   .container {
     height: 100%;
