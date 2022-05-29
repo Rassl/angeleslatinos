@@ -1,6 +1,7 @@
 import * as React from "react"
 import About from "../components/About/About"
 import BannerModule from "../components/BannerModule/BannerModule"
+import Contacts from "../components/Contacts/Contacts"
 import Creator from "../components/Creator/Creator"
 import Features from "../components/Features/Features"
 import Layout from "../components/Layout"
@@ -45,6 +46,7 @@ const Index = ({ location }) => {
         <Creator title="Angeles Latinos"
           subTitle="Лушая школа латино-американских танцев в Москве" />
         <Quiez />
+        <Contacts />
         <Modal open={location.hash === '#enroll'} />
       </Layout>
     </>
